@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>ideal-tiny-png</id>
+    <name>Tinypng-Plugins</name>
+    <version>1.0</version>
+    <vendor email="jixiongxu@meizu.com" url="https://www.meizu.com">xujixiong</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.java</depends>
+
+    <idea-version since-build="173.0"/>
+    <extensions defaultExtensionNs="com.intellij.modules.java">
+    </extensions>
+
+    <actions>
+        <action id="tiny-png-plugin" class="com.tinypng.action.TinyConfigAction" text="TinyPng"
+                description="Com.tinypng.action.TinyConfigAction">
+            <add-to-group group-id="WindowMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>

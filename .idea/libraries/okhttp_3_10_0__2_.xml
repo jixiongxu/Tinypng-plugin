@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="okhttp-3.10.0 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/libs/okhttp-3.10.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/libs/gson-2.8.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/libs/yinipng-lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/resources/libs/okio-1.14.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
