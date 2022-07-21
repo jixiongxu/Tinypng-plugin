@@ -2,7 +2,7 @@
 
 
 ## 使用
-1、安装Tinypng-plugin.zip
+1、安装Tinypng-plugin.zip \
 2、Window->TinyPng->配置项目文件->配置记录文件
 
 ### 项目文件
