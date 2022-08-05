@@ -15,7 +15,7 @@
     <actions>
         <action id="tiny-png-plugin" class="com.tinypng.action.TinyConfigAction" text="TinyPng"
                 description="Com.tinypng.action.TinyConfigAction">
-            <add-to-group group-id="WindowMenu" anchor="first"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
     </actions>
 

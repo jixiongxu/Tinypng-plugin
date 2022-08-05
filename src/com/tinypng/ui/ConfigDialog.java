@@ -89,10 +89,13 @@ public class ConfigDialog extends JDialog {
         dialog.setVisible(true);
     }
 
-    private void setLogMessage(String message) {
-        log_message.append(message);
-        log_message.append("\n");
+    private String mLastMsg = "";
 
+    private void setLogMessage(String message) {
+        log_message.setText(mLastMsg);
+        log_message.append("\n");
+        log_message.append(message);
+        mLastMsg = message;
     }
 
     // 获取项目路径
