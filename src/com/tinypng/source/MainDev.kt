@@ -96,7 +96,7 @@ object MainDev {
         val files = rootFile.listFiles()
         files?.forEach { file ->
             val pathFile = file.absolutePath.lowercase()
-            if (pathFile.endsWith(".png") || pathFile.endsWith(".jpg")) {
+            if (pathFile.endsWith(".png") || pathFile.endsWith(".jpg") || pathFile.endsWith(".webp") ) {
                 next.invoke(file.absolutePath)
             } else {
                 if (file.isDirectory) {
