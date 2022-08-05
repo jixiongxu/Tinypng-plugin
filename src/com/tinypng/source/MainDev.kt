@@ -18,17 +18,25 @@ object MainDev {
     private val md5s = ArrayList<String>()
     private var mRecordPath = ""
 
+    private val mThread = Thread {
+        loadTinyFileMD5()
+        setTinypngKey()
+        startTinypngAll()
+        mListener?.onLog("压缩结束")
+    }
+
     @JvmStatic
     fun start(configPath: String, recordPath: String, listener: LogCall? = null) {
+        listener?.onLog("Tinypng-plugin:${File("").absolutePath}")
         mListener = listener
         mRecordPath = recordPath
         mProjectConfig = ConfigUtils.loadProjectConfig(configPath)
-        Thread {
-            loadTinyFileMD5()
-            setTinypngKey()
-            startTinypngAll()
-            mListener?.onLog("压缩结束")
-        }.start()
+        mThread.start()
+    }
+
+    @JvmStatic
+    fun stop() {
+        mThread.interrupt()
     }
 
     private fun startTinypngAll() {
@@ -77,6 +85,7 @@ object MainDev {
                 }
             } else {
                 e.printStackTrace()
+                mListener?.onLog("压缩出错:${e.message}")
             }
         }
     }
@@ -96,7 +105,7 @@ object MainDev {
         val files = rootFile.listFiles()
         files?.forEach { file ->
             val pathFile = file.absolutePath.lowercase()
-            if (pathFile.endsWith(".png") || pathFile.endsWith(".jpg") || pathFile.endsWith(".webp") ) {
+            if (pathFile.endsWith(".png") || pathFile.endsWith(".jpg") || pathFile.endsWith(".webp")) {
                 next.invoke(file.absolutePath)
             } else {
                 if (file.isDirectory) {

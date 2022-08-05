@@ -81,6 +81,7 @@ public class ConfigDialog extends JDialog {
 
     private void onCancel() {
         dispose();
+        MainDev.stop();
     }
 
     public static void main(String[] args) {
@@ -89,13 +90,9 @@ public class ConfigDialog extends JDialog {
         dialog.setVisible(true);
     }
 
-    private String mLastMsg = "";
-
     private void setLogMessage(String message) {
-        log_message.setText(mLastMsg);
-        log_message.append("\n");
         log_message.append(message);
-        mLastMsg = message;
+        log_message.append("\n");
     }
 
     // 获取项目路径
