@@ -7,8 +7,8 @@ import kotlin.collections.ArrayList
 
 
 interface LogCall {
-    fun onLog(log: String) {
-    }
+    fun onLog(log: String)
+    fun onFinish()
 }
 
 object MainDev {
@@ -23,6 +23,7 @@ object MainDev {
         setTinypngKey()
         startTinypngAll()
         mListener?.onLog("压缩结束")
+        mListener?.onFinish()
     }
 
     @JvmStatic

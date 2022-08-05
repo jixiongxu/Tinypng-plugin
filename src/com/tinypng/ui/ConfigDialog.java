@@ -64,6 +64,8 @@ public class ConfigDialog extends JDialog {
     }
 
     private void onOK() {
+        buttonOK.setText("正在压缩...");
+        buttonOK.setEnabled(false);
         log_message.setText("");
         String path = tvConfigPath.getText();
         String recordPath = mRecordPath.getText();
@@ -72,6 +74,12 @@ public class ConfigDialog extends JDialog {
             return;
         }
         MainDev.start(path, recordPath, new LogCall() {
+            @Override
+            public void onFinish() {
+                buttonOK.setText("压缩结束");
+                buttonOK.setEnabled(true);
+            }
+
             @Override
             public void onLog(@NotNull String log) {
                 setLogMessage(log);
