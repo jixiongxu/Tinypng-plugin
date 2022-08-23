@@ -37,7 +37,7 @@ public class ConfigUtils {
     }
 
     public static void appendFileMD5Record(String recordPath, String json) throws Exception {
-        writerFileAsString(recordPath, json + ",", true);
+        writerFileAsString(recordPath, json + ",\n", true);
     }
 
     private static void writerFileAsString(String path, String data, boolean append) throws Exception {
