@@ -8,6 +8,8 @@ public class ConfigUtils {
 
     private static final String TINY_PROJECT_PATCH = "project_info";
 
+    public static String PROJECT_PATH = "";
+
     public static TinyPngConfig loadProjectConfig(String configPath) throws Exception {
         String configString = readFileAsString(configPath);
         return new Gson().fromJson(configString, TinyPngConfig.class);

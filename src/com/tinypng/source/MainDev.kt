@@ -41,7 +41,8 @@ object MainDev {
     }
 
     private fun startTinypngAll() {
-        mProjectConfig?.paths?.forEach { root ->
+        mProjectConfig?.paths?.forEach { path ->
+            val root = "${ConfigUtils.PROJECT_PATH}/${path}"
             scanImageFile(root) { file ->
                 executeIO {
                     tinypng(file)
