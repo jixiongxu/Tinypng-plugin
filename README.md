@@ -3,17 +3,18 @@
 
 ## 使用
 1、安装Tinypng-plugin.zip \
-2、Window->TinyPng->配置项目文件->配置记录文件
+2、Tool->TinyPng->配置项目文件->配置记录文件
 
-### 项目文件
+### 项目配置文件
 ```json
 {
   "paths":[
-    "xxx","xxx"
+    "app/src/main/res/drawable-xxhdpi",
+    "app/src/main/res/drawable-ar-xxhdpi"
   ],
   "keys":[
-    "xxx",
-    "xxx"
+    "tinypng的key",
+    "tinypng的key"
   ]
 }
 ```
