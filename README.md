@@ -24,3 +24,5 @@ key可以从这里获取 [https://tinypng.com/developers](https://tinypng.com/de
 ### 记录文件
 可以随意配置文本文件,但是不要人工修改内容,它记录的是修改后的文件的md5\
 首次使用新建个文件即可
+
+![image](https://user-images.githubusercontent.com/19563459/197696431-fa686e63-dec9-4c8d-8006-76f75a364c0a.png)
